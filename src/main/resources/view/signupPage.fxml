@@ -17,7 +17,7 @@
             <Image url="@../images/icon/login.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dddddd" height="416.0" layoutX="233.0" layoutY="100.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="381.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dddddd" height="398.0" layoutX="233.0" layoutY="100.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="381.0" />
       <Label layoutX="372.0" layoutY="99.0" text="Sign In" textFill="#0095ff">
          <font>
             <Font name="System Bold" size="33.0" />
@@ -60,5 +60,15 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="513.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnHomePage" prefHeight="18.0" prefWidth="101.0" style="-fx-background-color: #0abac5;" text="Home Page" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="474.0" layoutY="514.0">
+         <image>
+            <Image url="@../images/icon/icons8-logout-30.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

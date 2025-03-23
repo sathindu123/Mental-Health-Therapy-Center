@@ -18,17 +18,20 @@
             <Image url="@../images/icon/login.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fc7c3" height="220.0" layoutX="226.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="359.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9fc7c3" height="349.0" layoutX="221.0" layoutY="94.0" stroke="WHITE" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="367.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <Button layoutX="289.0" layoutY="365.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0" prefWidth="231.0" style="-fx-background-radius: 20; -fx-background-color: #27ae60;" text="Login" textFill="WHITE">
+      <Button layoutX="286.0" layoutY="365.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0" prefWidth="231.0" style="-fx-background-radius: 20; -fx-background-color: #27ae60;" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <TextField fx:id="txtuserName" layoutX="245.0" layoutY="226.0" onAction="#O_Action_UserName" prefHeight="31.0" prefWidth="320.0" promptText="User Name" style="-fx-background-radius: 20;">
+      <TextField fx:id="txtuserName" layoutX="273.0" layoutY="226.0" onAction="#O_Action_UserName" prefHeight="31.0" prefWidth="262.0" promptText="User Name" style="-fx-background-radius: 20;">
          <font>
             <Font size="13.0" />
          </font>
@@ -41,6 +44,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <PasswordField fx:id="txtPassword" layoutX="245.0" layoutY="275.0" onAction="#O_Actio0n_Password" prefHeight="31.0" prefWidth="320.0" promptText="Password" style="-fx-background-radius: 20;" />
+      <PasswordField fx:id="txtPassword" layoutX="274.0" layoutY="275.0" onAction="#O_Actio0n_Password" prefHeight="31.0" prefWidth="262.0" promptText="Password" style="-fx-background-radius: 20;" />
+      <Label layoutX="337.0" layoutY="141.0" prefHeight="53.0" prefWidth="140.0" text="LOGIN" textFill="#3f4d8d">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

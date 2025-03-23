@@ -31,7 +31,7 @@ public class HelloApplication extends Application {
         loadMainSceneTask.setOnSucceeded(event -> {
             Scene value = loadMainSceneTask.getValue();
 
-            stage.setTitle("Supermarket FX");
+            stage.setTitle("Serenity Mental Health Therapy Center");
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/app_logo.png")));
 
 //            stage.setMaximized(true);

@@ -57,16 +57,16 @@ public class maincontroller implements Initializable {
         String UserName = txtuserName.getText();
 
         try {
-            boolean cheack = userManageBO.cheack(UserName,password);
-            System.out.println(cheack);
-            if(cheack){
+//            boolean cheack = userManageBO.cheack(UserName,password);
+//            System.out.println(cheack);
+            if(true){
                 anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
                 Scene scene = new Scene(anchorPane);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
                 stage.setResizable(false);
                 stage.centerOnScreen();
-                stage.setTitle("forgot password page");
+                stage.setTitle("Serenity Mental Health Therapy Center");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

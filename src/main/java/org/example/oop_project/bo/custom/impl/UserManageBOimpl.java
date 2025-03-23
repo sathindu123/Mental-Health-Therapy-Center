@@ -6,7 +6,7 @@ import org.example.oop_project.dao.DaoTypes;
 import org.example.oop_project.dao.custom.UserManageDAO;
 
 public class UserManageBOimpl implements UserManageBO {
-    UserManageDAO userManageDAO = DaoFactory.getInstance().getDAO(DaoTypes.USER);
+//    UserManageDAO userManageDAO = DaoFactory.getInstance().getDAO(DaoTypes.USER);
 
 
 
