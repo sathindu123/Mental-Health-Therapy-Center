@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.oop_project.controller.DashbordController">
+<AnchorPane prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.oop_project.controller.DashbordController">
    <children>
       <VBox layoutX="1.0" prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -39,7 +38,7 @@
                         <Font name="Anna Regular ttstd" size="30.0" />
                      </font>
                   </Label>
-                  <Button layoutX="1269.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnlogout" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #0abac5; -fx-background-radius: 25;" text="Log Out" textFill="WHITE">
+                  <Button id="hi" fx:id="hi" layoutX="1269.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnlogout" prefHeight="25.0" prefWidth="86.0" style="-fx-background-radius: 25;" stylesheets="@style.css" text="Log Out" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -51,51 +50,111 @@
                      <children>
                         <AnchorPane prefHeight="261.0" prefWidth="1360.0">
                            <children>
-                              <Rectangle arcWidth="5.0" fill="#a9c7e0" height="222.0" layoutX="22.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 40; -fx-arc-height: 40;" width="200.0" />
-                              <Rectangle arcWidth="5.0" fill="#a9c7e0" height="222.0" layoutX="298.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 40; -fx-arc-height: 40;" width="200.0" />
-                              <Rectangle arcWidth="5.0" fill="#7dd6f1" height="222.0" layoutX="576.0" layoutY="37.0" stroke="#2200ff" strokeType="INSIDE" style="-fx-arc-width: 40; -fx-arc-height: 40; -fx-fill: #F7F7F7;" width="200.0" />
-                              <Rectangle arcWidth="5.0" fill="#a9c7e0" height="222.0" layoutX="857.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 40; -fx-arc-height: 40;" width="200.0" />
-                              <Rectangle arcWidth="5.0" fill="#a9c7e0" height="222.0" layoutX="1136.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 40; -fx-arc-height: 40;" width="200.0" />
-                              <ImageView fitHeight="108.0" fitWidth="174.0" layoutX="32.0" layoutY="114.0">
-                                 <image>
-                                    <Image url="@../images/icons8-customer-100.png" />
-                                 </image>
-                              </ImageView>
-                              <Label alignment="CENTER" layoutX="65.0" layoutY="46.0" prefHeight="30.0" prefWidth="119.0" text="Customer " textAlignment="CENTER" textFill="#f7f7f7">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" layoutX="62.0" layoutY="76.0" prefHeight="30.0" prefWidth="119.0" text="Registor" textAlignment="CENTER" textFill="#f7f7f7">
-                                 <font>
-                                    <Font name="System Bold" size="22.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" layoutX="898.0" layoutY="46.0" prefHeight="30.0" prefWidth="119.0" text="Manage" textAlignment="CENTER" textFill="#f7f7f7">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" layoutX="897.0" layoutY="73.0" prefHeight="30.0" prefWidth="119.0" text="Programe" textAlignment="CENTER" textFill="#f7f7f7">
-                                 <font>
-                                    <Font name="System Bold" size="22.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="108.0" fitWidth="130.0" layoutX="889.0" layoutY="115.0">
-                                 <image>
-                                    <Image url="@../images/icon/icons8-programs-100.png" />
-                                 </image>
-                              </ImageView>
-                              <Label alignment="CENTER" layoutX="615.0" layoutY="46.0" prefHeight="30.0" prefWidth="119.0" text="Payments" textAlignment="CENTER" textFill="#3f4d8d">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="108.0" fitWidth="139.0" layoutX="601.0" layoutY="111.0">
-                                 <image>
-                                    <Image url="@../images/icon/icons8-payments-100.png" />
-                                 </image>
-                              </ImageView>
+                              <AnchorPane id="payments" layoutX="584.0" layoutY="37.0" onMouseClicked="#btnPayments" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="40.0" layoutY="9.0" prefHeight="30.0" prefWidth="119.0" text="Payments" textAlignment="CENTER" textFill="#3f4d8d">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="108.0" fitWidth="139.0" layoutX="31.0" layoutY="70.0">
+                                       <image>
+                                          <Image url="@../images/icon/icons8-payments-100.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="patient" layoutX="307.0" layoutY="37.0" onMouseClicked="#btnTherapistMAnage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="40.0" layoutY="9.0" prefHeight="30.0" prefWidth="119.0" text="Therapist" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="23.0" layoutY="39.0" prefHeight="32.0" prefWidth="151.0" text="Management" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="88.0" fitWidth="100.0" layoutX="49.0" layoutY="90.0">
+                                       <image>
+                                          <Image url="@../images/icon/icons8-management-100.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="patient" layoutX="32.0" layoutY="37.0" onMouseClicked="#btnPatientManage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="108.0" fitWidth="174.0" layoutX="9.0" layoutY="79.0">
+                                       <image>
+                                          <Image url="@../images/icons8-customer-100.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" layoutX="39.0" layoutY="9.0" prefHeight="30.0" prefWidth="119.0" text="Patient" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="31.0" layoutY="39.0" prefHeight="32.0" prefWidth="139.0" text="Management" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane id="patient" layoutX="858.0" layoutY="37.0" onMouseClicked="#btnManagePrograme" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="41.0" layoutY="9.0" prefHeight="30.0" prefWidth="119.0" text="Manage" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="41.0" layoutY="39.0" prefHeight="30.0" prefWidth="119.0" text="Programe" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="108.0" fitWidth="130.0" layoutX="35.0" layoutY="76.0">
+                                       <image>
+                                          <Image url="@../images/icon/icons8-programs-100.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="patient" layoutX="1133.0" layoutY="37.0" onMouseClicked="#btnSessionScheduling" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="42.0" layoutY="9.0" prefHeight="30.0" prefWidth="119.0" text="Session" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="42.0" layoutY="39.0" prefHeight="30.0" prefWidth="119.0" text="Scheduling" textAlignment="CENTER" textFill="#f7f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="100.0" fitWidth="111.0" layoutX="45.0" layoutY="86.0">
+                                       <image>
+                                          <Image url="@../images/icon/icons8-timetable-100.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </AnchorPane>
                      </children>
@@ -110,7 +169,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Label layoutX="1083.0" layoutY="16.0" onMouseClicked="#btnsignIn" prefHeight="30.0" prefWidth="62.0" text="Sign In">
+                  <Label layoutX="1083.0" layoutY="16.0" onMouseClicked="#btnsignIn" prefHeight="30.0" prefWidth="62.0" styleClass="root" text="Sign In">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

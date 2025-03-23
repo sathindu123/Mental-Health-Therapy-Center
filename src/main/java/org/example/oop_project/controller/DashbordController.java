@@ -32,4 +32,64 @@ public class DashbordController {
         stage.centerOnScreen();
         stage.setTitle("Sign In Page");
     }
+
+    public void btnPatientManage(MouseEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/PatientManage.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
+
+    public void btnTherapistMAnage(MouseEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/TherapistManage.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
+
+    public void btnPayments(MouseEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/payments.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
+
+    public void btnManagePrograme(MouseEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/payments.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
+
+    public void btnSessionScheduling(MouseEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/SessionScheduling.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
+
+    public void backOnaction(ActionEvent event) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("Serenity Mental Health Therapy Center");
+    }
 }

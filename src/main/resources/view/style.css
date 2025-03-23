@@ -1,0 +1,67 @@
+/* Global Styles */
+.root {
+    -fx-background-color: #e4f8f9;
+}
+
+#hi {
+    -fx-background-color: #4A90E2;
+}
+
+#patient{
+    -fx-background-color: #a9c7e0; /* ලා අළු-නිල් පාට */
+    -fx-background-radius: 20; /* රවුම් කරන්න (දෙවන රූපයට ගැලපෙන්න) */
+    -fx-text-fill: white; /* ටෙක්ස්ට් එක සුදු පාට */
+    -fx-font-size: 18px; /* ටෙක්ස්ට් එකේ ලොකුකම */
+    -fx-font-weight: bold; /* ටෙක්ස්ට් එක බෝල්ඩ් */
+    -fx-padding: 15 30; /* ඇතුළත ඉඩ */
+    -fx-border-color: transparent; /* බෝඩර් එක ඉවත් කරන්න */
+
+    -fx-cursor: hand; /* මවුස් එක ගියාම හෑන්ඩ් කර්සර් එක */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2); /* සෙවනැල්ලක් එකතු කරන්න */
+    -fx-min-width: 200px; /* බටන් එකේ අවම පළල */
+    -fx-min-height: 150px; /* බටන් එකේ අවම උස */
+}
+
+#payments{
+    -fx-background-color:  #F7F7F7; /* ලා අළු-නිල් පාට */
+    -fx-background-radius: 20; /* රවුම් කරන්න (දෙවන රූපයට ගැලපෙන්න) */
+    -fx-text-fill: white; /* ටෙක්ස්ට් එක සුදු පාට */
+    -fx-font-size: 18px; /* ටෙක්ස්ට් එකේ ලොකුකම */
+    -fx-font-weight: bold; /* ටෙක්ස්ට් එක බෝල්ඩ් */
+    -fx-padding: 15 30; /* ඇතුළත ඉඩ */
+    -fx-border-color: transparent; /* බෝඩර් එක ඉවත් කරන්න */
+
+    -fx-cursor: hand; /* මවුස් එක ගියාම හෑන්ඩ් කර්සර් එක */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2); /* සෙවනැල්ලක් එකතු කරන්න */
+    -fx-min-width: 200px; /* බටන් එකේ අවම පළල */
+    -fx-min-height: 150px;
+}
+
+
+#payments:hover {
+    -fx-background-color: #a9c7e0; /* ටිකක් තද නිල් පාට */
+    -fx-scale-x: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-scale-y: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-transition: all 0.3s ease; /* ඇනිමේෂන් එක 0.3 තත්පරයකින් සිදුවෙන්න */
+}
+
+/* බටන් එක ඔබුවාම (Pressed) */
+#payments:pressed {
+    -fx-background-color: #2A6399; /* තවත් තද පාටක් */
+    -fx-scale-x: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+    -fx-scale-y: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+}
+
+#patient:hover {
+    -fx-background-color: #357ABD; /* ටිකක් තද නිල් පාට */
+    -fx-scale-x: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-scale-y: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-transition: all 0.3s ease; /* ඇනිමේෂන් එක 0.3 තත්පරයකින් සිදුවෙන්න */
+}
+
+/* බටන් එක ඔබුවාම (Pressed) */
+#patient:pressed {
+    -fx-background-color: #2A6399; /* තවත් තද පාටක් */
+    -fx-scale-x: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+    -fx-scale-y: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+}

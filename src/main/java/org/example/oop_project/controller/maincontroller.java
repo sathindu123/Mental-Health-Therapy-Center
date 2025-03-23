@@ -62,6 +62,7 @@ public class maincontroller implements Initializable {
             if(true){
                 anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
                 Scene scene = new Scene(anchorPane);
+                scene.getStylesheets().add(getClass().getResource("/view/style.css").toExternalForm());
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
                 stage.setResizable(false);
