@@ -21,6 +21,7 @@ public class HelloApplication extends Application {
             @Override
             protected Scene call() throws Exception {
 
+
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/view/main.fxml"));
                 return new Scene(fxmlLoader.load());
             }
