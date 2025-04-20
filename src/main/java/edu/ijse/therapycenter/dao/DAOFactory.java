@@ -14,12 +14,16 @@ public class DAOFactory {
     }
 
     public enum DAOType {
+        PATIENT,
+        THERAPIST,
         USER
     }
 
     public SuperDAO getDAO(DAOType type) {
         return switch (type) {
+            case PATIENT -> new PatientDAOImpl();
             case USER -> new UserDAOImpl();
+            case THERAPIST -> new TherapistDAOImpl();
         };
     }
 

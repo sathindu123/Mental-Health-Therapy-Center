@@ -15,7 +15,7 @@ module edu.ijse.therapycenter.therapycenter {
     opens edu.ijse.therapycenter.entity to org.hibernate.orm.core;
     opens edu.ijse.therapycenter.config to jakarta.persistence;
 
-//    opens lk.ijse.gdse.supermarket.dto.tm to javafx.base;
+
 
     exports edu.ijse.therapycenter;
     exports edu.ijse.therapycenter.controller;

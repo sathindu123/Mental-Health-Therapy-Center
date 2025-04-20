@@ -11,7 +11,12 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration() {
         Configuration configuration = new Configuration().configure()
-                .addAnnotatedClass(User.class);
+                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Therapist.class)
+                .addAnnotatedClass(Patient.class)
+                .addAnnotatedClass(TherapyProgram.class)
+                .addAnnotatedClass(TherapySession.class)
+                .addAnnotatedClass(Payment.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

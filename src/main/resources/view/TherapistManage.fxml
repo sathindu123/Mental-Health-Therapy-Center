@@ -1,10 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.therapycenter.controller.TherapistManageController">
+<AnchorPane prefHeight="734.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.therapycenter.controller.TherapistManageController">
    <children>
-      <Button layoutX="161.0" layoutY="126.0" mnemonicParsing="false" onAction="#backOnaction" text="back" />
+      <Button layoutX="7.0" layoutY="2.0" mnemonicParsing="false" onAction="#backOnaction" text="back" />
+      <Label layoutX="116.0" layoutY="1.0" prefHeight="32.0" prefWidth="414.0" text="Therapist" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+         <graphic>
+            <HBox prefHeight="2.0" prefWidth="80.0" style="-fx-background-color: #3498db;" />
+         </graphic>
+      </Label>
+      <HBox layoutX="283.0" layoutY="14.0" prefHeight="2.0" prefWidth="80.0" style="-fx-background-color: #3498db;" />
+      <Label layoutX="155.0" layoutY="42.0" prefWidth="80.0" text="ID" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTherapistId" layoutX="202.0" layoutY="66.0" text="ID" textFill="#2c3e50">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="87.0" prefHeight="17.0" prefWidth="82.0" text="Specialization:" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSpecialization" layoutX="505.0" layoutY="104.0" prefHeight="30.0" prefWidth="233.0" promptText="Enter specialization" />
+      <HBox alignment="CENTER_LEFT" layoutX="195.0" layoutY="178.0" spacing="10.0" />
+      <TextField fx:id="txtName" layoutX="143.0" layoutY="97.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter therapist name" />
+      <Label layoutX="457.0" layoutY="87.0" prefWidth="80.0" text="Name:" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="326.0" layoutY="36.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter therapist name" />
+      <Label fx:id="errorMessage" layoutX="373.0" layoutY="180.0" prefHeight="17.0" prefWidth="112.0" />
+      <Button fx:id="btnAdd" layoutX="447.0" layoutY="171.0" mnemonicParsing="false" onAction="#addTherapist" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="39.0" layoutY="171.0" mnemonicParsing="false" onAction="#updateTherapist" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="313.0" layoutY="161.0" mnemonicParsing="false" onAction="#deleteTherapist" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -x-text-fill: white;" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReset" layoutX="172.0" layoutY="171.0" mnemonicParsing="false" onAction="#resetForm" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Reset">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="134.0" layoutY="234.0" text="Therapist Records:" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTherapists" layoutX="77.0" layoutY="254.0" onMouseClicked="#therapistSelectOnAction" prefHeight="290.0" prefWidth="740.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="250.0" text="Name" />
+            <TableColumn fx:id="colSpecialization" prefWidth="350.0" text="Specialization" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

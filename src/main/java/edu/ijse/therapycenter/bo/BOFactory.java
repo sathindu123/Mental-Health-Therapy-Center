@@ -14,12 +14,17 @@ public class BOFactory {
     }
 
     public enum BOType {
+        PATIENT,
+        THERAPIST,
         USER
+
     }
 
     public SuperBO getBO(BOType type) {
         return switch (type) {
             case USER -> new UserBOImpl();
+            case PATIENT -> new PatientBOImpl();
+            case THERAPIST -> new TherapistBOImpl();
         };
     }
 
