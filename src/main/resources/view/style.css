@@ -1,10 +1,56 @@
 /* Global Styles */
-.root {
-    -fx-background-color: #e4f8f9;
-}
+/*.root {*/
+/*    -fx-background-color: #e4f8f9;*/
+/*}*/
 
 #hi {
     -fx-background-color: #4A90E2;
+}
+
+#hi:hover{
+    -fx-background-color:  #357ABD;
+    -fx-scale-x: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-scale-y: 1.05; /* බටන් එක 5% ලොකු කරන්න */
+    -fx-transition: all 0.3s ease; /* ඇනිමේෂන් එක 0.3 තත්පරයකින් සිදුවෙන්න */
+}
+
+#hi:pressed {
+    -fx-background-color: #2A6399; /* තවත් තද පාටක් */
+    -fx-scale-x: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+    -fx-scale-y: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+}
+#signIn {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333333; /* Dark gray text color */
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10; /* Top, Right, Bottom, Left padding */
+    -fx-alignment: center;
+    -fx-font-family: "Arial"; /* Clean font */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Subtle shadow */
+}
+
+/* Hover state with animation */
+#signIn:hover {
+    -fx-text-fill: #FFFFFF; /* Bright blue text */
+    -fx-background-color: rgba(74, 144, 226, 0.1); /* Light blue background with transparency */
+    -fx-scale-x: 1.05; /* Scale up 5% horizontally */
+    -fx-scale-y: 1.05; /* Scale up 5% vertically */
+    -fx-rotate: 2; /* Slight rotation for a playful effect */
+    -fx-transition: all 0.3s ease; /* Smooth 0.3s transition */
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.5), 10, 0, 0, 2); /* Glowing shadow */
+}
+
+/* Pressed state */
+#signIn:pressed {
+    -fx-text-fill: #FFFFFF; /* White text */
+    -fx-background-color: #357ABD; /* Darker blue background */
+    -fx-scale-x: 0.95; /* Scale down 5% horizontally */
+    -fx-scale-y: 0.95; /* Scale down 5% vertically */
+    -fx-rotate: 0; /* Reset rotation */
+    -fx-transition: all 0.2s ease; /* Faster transition for press */
+    -fx-background-radius: 5; /* Keep rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 1); /* Smaller shadow */
 }
 
 #patient{
@@ -64,4 +110,15 @@
     -fx-background-color: #2A6399; /* තවත් තද පාටක් */
     -fx-scale-x: 0.95; /* බටන් එක 5% පොඩි කරන්න */
     -fx-scale-y: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+}
+
+
+#VBOX {
+    -fx-background-color: linear-gradient(to bottom, #C7F8FB, #A0E0EC, #7EC6D2); /* Smooth gradient with light blue tones */
+}
+
+#AncorPane {
+
+    -fx-background-color: linear-gradient(to bottom, #E8FBFC, #A0E0EC, #C7F8FB);
+    /*-fx-background-color: linear-gradient(to bottom, #7EC6D2, #A0E0EC, #E8FBFC); !* Dark to light transition *!*/
 }

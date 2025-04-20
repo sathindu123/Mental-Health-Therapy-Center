@@ -1,15 +1,22 @@
-module org.example.oop_project {
+module edu.ijse.therapycenter.therapycenter {
     requires javafx.controls;
     requires javafx.fxml;
-
-    requires com.dlsc.formsfx;
     requires org.hibernate.orm.core;
-    requires java.desktop;
     requires static lombok;
     requires jakarta.persistence;
 
     requires java.naming;
+    requires modelmapper;
+    requires bcrypt;
+    requires java.desktop;
 
-    opens org.example.oop_project.controller to javafx.fxml;
-    exports org.example.oop_project;
+    opens edu.ijse.therapycenter.controller to javafx.fxml;
+
+    opens edu.ijse.therapycenter.entity to org.hibernate.orm.core;
+    opens edu.ijse.therapycenter.config to jakarta.persistence;
+
+//    opens lk.ijse.gdse.supermarket.dto.tm to javafx.base;
+
+    exports edu.ijse.therapycenter;
+    exports edu.ijse.therapycenter.controller;
 }

@@ -10,12 +10,13 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.oop_project.controller.DashbordController">
+<AnchorPane prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.therapycenter.controller.DashbordController">
    <children>
-      <VBox layoutX="1.0" prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox id="AncorPane" layoutX="1.0" prefHeight="734.0" prefWidth="1360.0" style="-fx-background-radius: 20;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="734.0" prefWidth="1360.0" style="-fx-background-color: #e4f8f9;">
+            <AnchorPane prefHeight="591.0" prefWidth="1360.0" style="-fx-background-color: #e4f8f9;" stylesheets="@style.css">
                <children>
+                  <AnchorPane id="AncorPane" prefHeight="476.0" prefWidth="1360.0" stylesheets="@style.css" />
                   <VBox layoutX="373.0" layoutY="60.0" prefHeight="429.0" prefWidth="1017.0" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <children>
                         <ImageView fitHeight="429.0" fitWidth="987.0">
@@ -46,9 +47,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <VBox layoutY="476.0" prefHeight="261.0" prefWidth="1360.0" style="-fx-background-color: b5f4f8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <VBox id="VBOX" layoutY="476.0" prefHeight="261.0" prefWidth="1360.0" style="-fx-background-color: b5f4f8;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="261.0" prefWidth="1360.0">
+                        <AnchorPane id="VBOX" prefHeight="261.0" prefWidth="1360.0" stylesheets="@style.css">
                            <children>
                               <AnchorPane id="payments" layoutX="584.0" layoutY="37.0" onMouseClicked="#btnPayments" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <cursor>
@@ -169,7 +170,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Label layoutX="1083.0" layoutY="16.0" onMouseClicked="#btnsignIn" prefHeight="30.0" prefWidth="62.0" styleClass="root" text="Sign In">
+                  <Label id="signIn" layoutX="1077.0" layoutY="15.0" onMouseClicked="#btnsignIn" prefHeight="31.0" prefWidth="86.0" stylesheets="@style.css" text="Sign In">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -177,7 +178,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="1041.0" layoutY="16.0">
+                  <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="1042.0" layoutY="16.0">
                      <image>
                         <Image url="@../images/icon/icons8-sign-in-100.png" />
                      </image>

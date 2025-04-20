@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="800.0" style="-fx-background-radius: 30; -fx-background-color: #afb3b8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.oop_project.controller.maincontroller">
+<AnchorPane fx:id="mainAnchor" prefHeight="547.0" prefWidth="800.0" style="-fx-background-radius: 30; -fx-background-color: #afb3b8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.therapycenter.controller.LogInController">
    <children>
       <ImageView fitHeight="547.0" fitWidth="800.0">
          <image>
@@ -23,7 +23,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <Button layoutX="286.0" layoutY="365.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0" prefWidth="231.0" style="-fx-background-radius: 20; -fx-background-color: #27ae60;" text="Login" textFill="WHITE">
+      <Button fx:id="btSignIn" layoutX="286.0" layoutY="365.0" mnemonicParsing="false" onAction="#navHomePage" prefHeight="25.0" prefWidth="231.0" style="-fx-background-radius: 20; -fx-background-color: #27ae60;" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -31,12 +31,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="txtuserName" layoutX="273.0" layoutY="226.0" onAction="#O_Action_UserName" prefHeight="31.0" prefWidth="262.0" promptText="User Name" style="-fx-background-radius: 20;">
+      <TextField fx:id="txtEmail" layoutX="273.0" layoutY="226.0" onAction="#O_Action_UserName" prefHeight="31.0" prefWidth="262.0" promptText="User Name" style="-fx-background-radius: 20;">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Label layoutX="344.0" layoutY="327.0" onMouseClicked="#O_mouse_Forgot" text="Forgot Password?" textFill="#0d00ff" underline="true">
+      <Label layoutX="344.0" layoutY="327.0" onMouseClicked="#navSignUp" text="Forgot Password?" textFill="#0d00ff" underline="true">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
