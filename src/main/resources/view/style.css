@@ -9,15 +9,15 @@
 
 #hi:hover{
     -fx-background-color:  #357ABD;
-    -fx-scale-x: 1.05; /* බටන් එක 5% ලොකු කරන්න */
-    -fx-scale-y: 1.05; /* බටන් එක 5% ලොකු කරන්න */
-    -fx-transition: all 0.3s ease; /* ඇනිමේෂන් එක 0.3 තත්පරයකින් සිදුවෙන්න */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-transition: all 0.3s ease;
 }
 
 #hi:pressed {
-    -fx-background-color: #2A6399; /* තවත් තද පාටක් */
-    -fx-scale-x: 0.95; /* බටන් එක 5% පොඩි කරන්න */
-    -fx-scale-y: 0.95; /* බටන් එක 5% පොඩි කරන්න */
+    -fx-background-color: #2A6399;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
 }
 #signIn {
     -fx-font-size: 18px;

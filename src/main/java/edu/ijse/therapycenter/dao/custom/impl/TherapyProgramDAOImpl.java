@@ -2,12 +2,12 @@ package edu.ijse.therapycenter.dao.custom.impl;
 
 import edu.ijse.therapycenter.config.FactoryConfiguration;
 import edu.ijse.therapycenter.dao.custom.TherapyProgramDAO;
-import edu.ijse.therapycenter.entity.Patient;
 import edu.ijse.therapycenter.entity.TherapyProgram;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -130,4 +130,32 @@ public class TherapyProgramDAOImpl implements TherapyProgramDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
+
+    @Override
+    public ArrayList<String> getProgramList() {
+        ArrayList<String> programNames = new ArrayList<>();
+
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            List<String> names = session.createQuery("SELECT tp.name FROM TherapyProgram tp", String.class).list();
+            programNames.addAll(names);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return programNames;
+    }
+
+    @Override
+    public TherapyProgram getAllTherapyProgram(String programName) {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            return session.createQuery(
+                            "FROM TherapyProgram WHERE name = :name", TherapyProgram.class)
+                    .setParameter("name", programName)
+                    .uniqueResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

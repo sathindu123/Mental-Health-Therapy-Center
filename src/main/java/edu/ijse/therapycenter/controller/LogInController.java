@@ -21,6 +21,7 @@ import javax.swing.*;
 import java.io.IOException;
 
 public class LogInController {
+    private static String roleID = "";
 
     @FXML
     private AnchorPane mainAnchor;
@@ -35,6 +36,10 @@ public class LogInController {
     private TextField txtPassword;
 
     private final UserBOImpl userBO = (UserBOImpl) BOFactory.getInstance().getBO(BOFactory.BOType.USER);
+
+    public static String getRoleID() {
+        return roleID;
+    }
 
     @FXML
     void navHomePage(ActionEvent event) throws IOException {
@@ -66,25 +71,34 @@ public class LogInController {
                 alert.show();
             }else {
                 if(role.equals("Admin")){
+                    roleID = "Admin";
                     Parent dashboard = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
                     Scene scene = new Scene(dashboard);
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     if (stage == null) {
-                        System.out.println("Stage is null! Cannot navigate.");
+                        new Alert(Alert.AlertType.ERROR, "Stage is null! Cannot navigate.").show();
+
                         return;
                     }
                     stage.setScene(scene);
                     stage.centerOnScreen();
                     stage.setResizable(false);
                     stage.show();
-                }else if(role.equals("Receptionist")){
-                    if (mainAnchor == null) {
-                        System.out.println("mainAnchor is null! Cannot load dashboard.");
+                }else if(role.equals("Receptionist")) {
+                    roleID = "Receptionist";
+                    Parent dashboard = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
+                    Scene scene = new Scene(dashboard);
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    if (stage == null) {
+                        new Alert(Alert.AlertType.ERROR, "Stage is null! Cannot navigate.").show();
+
                         return;
                     }
-                    mainAnchor.getChildren().clear();
-                    Parent dashboard = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
-                    mainAnchor.getChildren().add(dashboard);}
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+                    stage.setResizable(false);
+                    stage.show();
+                }
             }
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);

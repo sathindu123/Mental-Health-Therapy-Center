@@ -98,7 +98,7 @@ public class TherapistManageController extends DashbordController{
             lblTherapistId.setText(id);
             loadTherapistTable();
         } else {
-            System.out.println("Failed to delete therapist");
+
         }
     }
 

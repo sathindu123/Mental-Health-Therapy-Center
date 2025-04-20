@@ -1,6 +1,7 @@
 package edu.ijse.therapycenter.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -10,8 +11,39 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DashbordController {
+public class DashbordController extends LogInController{
     private AnchorPane anchorPane;
+
+    @FXML
+    private AnchorPane PaymentAncorPane;
+
+    @FXML
+    private AnchorPane TherapistAncorPane;
+
+    @FXML
+    private AnchorPane PatientAncorPane;
+
+    @FXML
+    private AnchorPane ProgrameAncorPane;
+
+    @FXML
+    private AnchorPane TimeAncorPane;
+
+
+    public void initialize(){
+        String role = LogInController.getRoleID();
+        if (!(role.equals("Admin"))) {
+            TherapistAncorPane.setDisable(true);
+            ProgrameAncorPane.setDisable(true);
+
+        }
+        else {
+            TimeAncorPane.setDisable(true);
+            PatientAncorPane.setDisable(true);
+            PaymentAncorPane.setDisable(true);
+        }
+
+    }
 
     public void btnlogout(ActionEvent event) throws IOException {
         anchorPane = FXMLLoader.load(getClass().getResource("/view/main.fxml"));
@@ -64,7 +96,7 @@ public class DashbordController {
     }
 
     public void btnManagePrograme(MouseEvent event) throws IOException {
-        anchorPane = FXMLLoader.load(getClass().getResource("/view/payments.fxml"));
+        anchorPane = FXMLLoader.load(getClass().getResource("/view/ProgrameManage.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -51,7 +51,7 @@
                      <children>
                         <AnchorPane id="VBOX" prefHeight="261.0" prefWidth="1360.0" stylesheets="@style.css">
                            <children>
-                              <AnchorPane id="payments" layoutX="584.0" layoutY="37.0" onMouseClicked="#btnPayments" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                              <AnchorPane id="payments" fx:id="PaymentAncorPane" layoutX="584.0" layoutY="37.0" onMouseClicked="#btnPayments" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -68,7 +68,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane id="patient" layoutX="307.0" layoutY="37.0" onMouseClicked="#btnTherapistMAnage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                              <AnchorPane id="patient" fx:id="TherapistAncorPane" layoutX="307.0" layoutY="37.0" onMouseClicked="#btnTherapistMAnage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -90,7 +90,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane id="patient" layoutX="32.0" layoutY="37.0" onMouseClicked="#btnPatientManage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                              <AnchorPane id="patient" fx:id="PatientAncorPane" layoutX="32.0" layoutY="37.0" onMouseClicked="#btnPatientManage" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <children>
                                     <ImageView fitHeight="108.0" fitWidth="174.0" layoutX="9.0" layoutY="79.0">
                                        <image>
@@ -112,7 +112,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </AnchorPane>
-                              <AnchorPane id="patient" layoutX="858.0" layoutY="37.0" onMouseClicked="#btnManagePrograme" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                              <AnchorPane id="patient" fx:id="ProgrameAncorPane" layoutX="858.0" layoutY="37.0" onMouseClicked="#btnManagePrograme" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -134,7 +134,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane id="patient" layoutX="1133.0" layoutY="37.0" onMouseClicked="#btnSessionScheduling" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
+                              <AnchorPane id="patient" fx:id="TimeAncorPane" layoutX="1133.0" layoutY="37.0" onMouseClicked="#btnSessionScheduling" prefHeight="222.0" prefWidth="200.0" stylesheets="@style.css">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>

@@ -61,6 +61,17 @@ public class TherapistBOImpl implements TherapistBO {
         return false;
     }
 
+    @Override
+    public ArrayList<String> therapistList() {
+        return therapistDAO.therapistList();
+    }
+
+    @Override
+    public TherapistDTO getAllTherapist(String therapistName) {
+        Therapist therapist = therapistDAO.getAllTherapist(therapistName);
+        return toDTO(therapist);
+    }
+
     public static TherapistDTO toDTO(Therapist therapist) {
         if (therapist == null) {
             return null;

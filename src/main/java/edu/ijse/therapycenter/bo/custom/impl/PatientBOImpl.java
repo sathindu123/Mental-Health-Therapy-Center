@@ -13,6 +13,7 @@ import java.util.Optional;
 
 public class PatientBOImpl implements PatientBO {
 
+
     private final PatientDAOImpl patientDAO = (PatientDAOImpl) DAOFactory.getInstance().getDAO(DAOFactory.DAOType.PATIENT);
 
     @Override
@@ -48,8 +49,6 @@ public class PatientBOImpl implements PatientBO {
         return users;
     }
 
-
-
     @Override
     public Optional<PatientDTO> findByPK(String pk) {
         return Optional.empty();
@@ -63,6 +62,17 @@ public class PatientBOImpl implements PatientBO {
     @Override
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
+    }
+
+    @Override
+    public ArrayList<String> patientList() {
+        return patientDAO.patientList();
+    }
+
+    @Override
+    public PatientDTO getAllPatient(String patientName) {
+        Patient patient = patientDAO.getAllPatient(patientName);
+        return toDTO(patient);
     }
 
     public static PatientDTO toDTO(Patient patient) {

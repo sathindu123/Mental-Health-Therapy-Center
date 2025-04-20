@@ -3,9 +3,7 @@ package edu.ijse.therapycenter.bo.custom.impl;
 import edu.ijse.therapycenter.bo.custom.TherapyProgramBO;
 import edu.ijse.therapycenter.dao.DAOFactory;
 import edu.ijse.therapycenter.dao.custom.impl.TherapyProgramDAOImpl;
-import edu.ijse.therapycenter.dto.PatientDTO;
 import edu.ijse.therapycenter.dto.TherapyProgramDTO;
-import edu.ijse.therapycenter.entity.Patient;
 import edu.ijse.therapycenter.entity.TherapyProgram;
 
 import java.sql.SQLException;
@@ -62,6 +60,17 @@ public class TherapyProgramBOImpl implements TherapyProgramBO {
     @Override
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
+    }
+
+    @Override
+    public ArrayList<String> getProgramList() {
+        return therapyProgramDAO.getProgramList();
+    }
+
+    @Override
+    public TherapyProgramDTO getAllTherapyProgram(String programName) {
+        TherapyProgram therapyProgram = therapyProgramDAO.getAllTherapyProgram(programName);
+        return convertToDTO(therapyProgram);
     }
 
     public static TherapyProgramDTO convertToDTO(TherapyProgram entity) {

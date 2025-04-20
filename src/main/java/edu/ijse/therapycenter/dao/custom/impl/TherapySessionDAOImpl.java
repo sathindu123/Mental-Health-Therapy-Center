@@ -1,19 +1,18 @@
 package edu.ijse.therapycenter.dao.custom.impl;
 
+import edu.ijse.therapycenter.config.FactoryConfiguration;
 import edu.ijse.therapycenter.dao.custom.TherapySessionDAO;
 import edu.ijse.therapycenter.entity.Patient;
 import edu.ijse.therapycenter.entity.Therapist;
 import edu.ijse.therapycenter.entity.TherapyProgram;
 import edu.ijse.therapycenter.entity.TherapySession;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-
-import edu.ijse.therapycenter.config.FactoryConfiguration;
-import org.hibernate.Transaction;
 
 public class TherapySessionDAOImpl implements TherapySessionDAO {
 

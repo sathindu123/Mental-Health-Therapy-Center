@@ -16,6 +16,9 @@ public class DAOFactory {
     public enum DAOType {
         PATIENT,
         THERAPIST,
+        PAYMENT,
+        THERAPY_PROGRAM,
+        THERAPY_SESSION,
         USER
     }
 
@@ -24,6 +27,9 @@ public class DAOFactory {
             case PATIENT -> new PatientDAOImpl();
             case USER -> new UserDAOImpl();
             case THERAPIST -> new TherapistDAOImpl();
+            case THERAPY_PROGRAM -> new TherapyProgramDAOImpl();
+            case THERAPY_SESSION -> new TherapySessionDAOImpl();
+            case PAYMENT -> new PaymentDAOImpl();
         };
     }
 

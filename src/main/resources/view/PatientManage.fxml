@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="734.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.therapycenter.controller.PatientManageController">
    <children>
-      <AnchorPane id="AncorPane" layoutX="2.0" layoutY="-4.0" prefHeight="734.0" prefWidth="1360.0" stylesheets="@style.css">
+      <AnchorPane id="VBOX" layoutX="2.0" layoutY="-4.0" prefHeight="734.0" prefWidth="1360.0" stylesheets="@style.css">
          <children>
             <AnchorPane layoutY="4.0" prefHeight="755.0" prefWidth="1360.0">
                <children>

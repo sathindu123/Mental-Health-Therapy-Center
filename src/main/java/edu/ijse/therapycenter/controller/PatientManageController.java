@@ -92,7 +92,7 @@ public class PatientManageController extends DashbordController {
         }
 
         if (contact.matches(regex)) {
-            System.out.println("Valid contact number: " + contact);
+
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -120,7 +120,7 @@ public class PatientManageController extends DashbordController {
             this.id = String.valueOf(patientBO.getLastPK().orElse("Error"));
             loadPatientTable();
         } else {
-            System.out.println("Failed to save patient");
+
         }
 
     }
@@ -139,7 +139,7 @@ public class PatientManageController extends DashbordController {
             dpRegDate.setDisable(false);
             loadPatientTable();
         } else {
-            System.out.println("Failed to delete patient");
+
         }
     }
 
@@ -213,7 +213,7 @@ public class PatientManageController extends DashbordController {
             if (isUpdated) {
                 loadPatientTable();
             } else {
-                System.out.println("Failed to update patient");
+
             }
 
         } else {

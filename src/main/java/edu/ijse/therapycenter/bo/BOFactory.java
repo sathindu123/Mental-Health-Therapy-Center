@@ -16,6 +16,9 @@ public class BOFactory {
     public enum BOType {
         PATIENT,
         THERAPIST,
+        THERAPY_PROGRAM,
+        THERAPY_SESSION,
+        PAYMENT,
         USER
 
     }
@@ -25,6 +28,9 @@ public class BOFactory {
             case USER -> new UserBOImpl();
             case PATIENT -> new PatientBOImpl();
             case THERAPIST -> new TherapistBOImpl();
+            case THERAPY_PROGRAM -> new TherapyProgramBOImpl();
+            case THERAPY_SESSION -> new TherapySessionBOImpl();
+            case PAYMENT -> new PaymentBOImpl();
         };
     }
 
