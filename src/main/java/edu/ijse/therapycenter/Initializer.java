@@ -27,7 +27,7 @@ public class Initializer extends Application {
             protected Scene call() throws Exception {
 
 
-                FXMLLoader fxmlLoader = new FXMLLoader(Initializer.class.getResource("/view/main.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(Initializer.class.getResource("/view/Dashbord.fxml"));
                 return new Scene(fxmlLoader.load());
             }
         };

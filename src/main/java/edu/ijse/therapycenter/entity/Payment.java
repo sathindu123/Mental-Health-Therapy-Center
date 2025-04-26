@@ -11,12 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "payments")
-public class Payment implements SuperEntity{
+public class Payment implements SuperEntity {
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private double amount;
     private String date;
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")

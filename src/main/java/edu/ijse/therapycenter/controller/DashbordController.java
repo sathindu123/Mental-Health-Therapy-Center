@@ -33,8 +33,8 @@ public class DashbordController extends LogInController{
     public void initialize(){
         String role = LogInController.getRoleID();
         if (!(role.equals("Admin"))) {
-            TherapistAncorPane.setDisable(true);
-            ProgrameAncorPane.setDisable(true);
+//            TherapistAncorPane.setDisable(true);
+//            ProgrameAncorPane.setDisable(true);
 
         }
         else {
@@ -115,7 +115,7 @@ public class DashbordController extends LogInController{
         stage.setTitle("Serenity Mental Health Therapy Center");
     }
 
-    public void backOnaction(ActionEvent event) throws IOException {
+    public void backOnaction(MouseEvent event) throws IOException {
         anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashbord.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

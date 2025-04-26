@@ -4,5 +4,5 @@ import edu.ijse.therapycenter.dao.CrudDAO;
 import edu.ijse.therapycenter.entity.Payment;
 
 public interface PaymentDAO extends CrudDAO<Payment,String> {
-
+    double calculateBalance(double fee, double amount);
 }
