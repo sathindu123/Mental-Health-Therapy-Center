@@ -17,4 +17,9 @@ public interface PaymentBO extends SuperBO {
     Optional<String> getLastPK();
     boolean exist(String id) throws SQLException, ClassNotFoundException;
 
+    List<String> searchListItam(String searchText) throws Exception;
+
+    String getIdName(String name) throws Exception;
+
+    List<String> getSessionId(String name);
 }

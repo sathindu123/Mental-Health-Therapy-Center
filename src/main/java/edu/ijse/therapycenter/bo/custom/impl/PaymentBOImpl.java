@@ -61,6 +61,30 @@ public class PaymentBOImpl implements PaymentBO {
         return false;
     }
 
+    @Override
+    public List<String> searchListItam(String searchText) throws Exception {
+        List<String> suggestions = new ArrayList<>();
+        suggestions = paymentDAO.seacrh(searchText);
+        return suggestions;
+    }
+
+    @Override
+    public String getIdName(String name) throws Exception {
+        String names = paymentDAO.getIdName(name);
+        return names;
+    }
+
+    @Override
+    public List<String> getSessionId(String name) {
+        List<String> sdf = new ArrayList<>();
+        try {
+            sdf = paymentDAO.getSessionID(name);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return sdf;
+    }
+
     public static PaymentDTO toDTO(Payment payment) {
         if (payment == null) return null;
 

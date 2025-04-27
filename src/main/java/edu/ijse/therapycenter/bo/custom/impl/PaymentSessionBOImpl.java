@@ -8,7 +8,6 @@ import edu.ijse.therapycenter.dao.custom.impl.TherapySessionDAOImpl;
 import edu.ijse.therapycenter.dto.PaymentDTO;
 import edu.ijse.therapycenter.dto.TherapySessionDTO;
 import edu.ijse.therapycenter.entity.*;
-import org.hibernate.PessimisticLockException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -146,7 +145,8 @@ public class PaymentSessionBOImpl implements PaymentSessionBO {
     }
 
 
-    public void updateSession(TherapySessionDTO therapySessionDTO, PaymentDTO paymentDTO) throws Exception {
+    public double updateSession(TherapySessionDTO therapySessionDTO, PaymentDTO paymentDTO) throws Exception {
+        double balance = 0;
         Session session = null;
         try {
             session = FactoryConfiguration.getInstance().getSession();
@@ -159,7 +159,7 @@ public class PaymentSessionBOImpl implements PaymentSessionBO {
             }
 
             double amount = paymentDTO.getAmount();
-            double balance = paymentDAO.calculateBalance(fee, amount);
+            balance = paymentDAO.calculateBalance(fee, amount);
             if (balance < 0) {
                 throw new Exception("Amount exceeds the therapy program fee. Balance cannot be negative.");
             }
@@ -174,6 +174,8 @@ public class PaymentSessionBOImpl implements PaymentSessionBO {
                 System.out.println("Session closed.");
             }
         }
+        System.out.println("himoko"+balance);
+        return balance;
     }
 
     private void updateTherapySession(TherapySession therapySession) throws Exception {

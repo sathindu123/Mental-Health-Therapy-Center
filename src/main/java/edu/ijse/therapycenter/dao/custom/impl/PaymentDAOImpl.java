@@ -91,4 +91,63 @@ public class PaymentDAOImpl implements PaymentDAO {
     public double calculateBalance(double fee, double amount) {
         return fee - amount;
     }
+
+    @Override
+    public List<String> seacrh(String searchText) throws Exception {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            // JPQL query එක ලියනවා
+            String jpql = "SELECT p.name FROM TherapySession ts JOIN ts.patient p WHERE p.name LIKE :searchText";
+            List<String> suggestions = session.createQuery(jpql, String.class)
+                    .setParameter("searchText", searchText + "%")
+                    .getResultList();
+
+            return suggestions;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("Error while searching patients in therapy sessions: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public String getIdName(String name) throws Exception {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            // JPQL query එක ලියනවා
+            String jpql = "SELECT p.id FROM Patient p WHERE p.name = :name";
+            List<String> result = session.createQuery(jpql, String.class)
+                    .setParameter("name", name)
+                    .setMaxResults(1) // එක patient එකක් විතරක් ගන්න
+                    .getResultList();
+
+            if (result.isEmpty()) {
+                throw new Exception("Patient not found for name: " + name);
+            }
+
+            return result.get(0); // ID එක return කරනවා
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("Error while searching patient ID by name: " + e.getMessage(), e);
+        }
+
+    }
+
+    @Override
+    public List<String> getSessionID(String name) throws Exception {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+
+            String jpql = "SELECT ts.id FROM TherapySession ts WHERE ts.patient.id = :patientId";
+            List<String> sessionIds = session.createQuery(jpql, String.class)
+                    .setParameter("patientId", name)
+                    .getResultList();
+
+            if (sessionIds.isEmpty()) {
+                throw new Exception("No therapy sessions found for patient ID: " + name);
+            }
+
+            return sessionIds;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("Error while retrieving session IDs for patient ID: " + name, e);
+        }
+
+    }
 }
